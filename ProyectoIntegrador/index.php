@@ -93,7 +93,7 @@
 
                         <button type="submit">Entrar</button>
                     </form>
-                    <a href="#" class="forgot-link">¿Olvidaste tu NIP?</a>
+                    <a href="#" class="forgot-link">¿Olvidaste tu CONTRAAAAAAA?</a>
                 </div>
             </main>
             <footer>
