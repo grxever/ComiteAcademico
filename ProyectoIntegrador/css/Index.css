@@ -31,23 +31,23 @@ header .logos {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 41px ;
 }
 
 header .left-logo {
-    width: 100px; /* Ajusta el tamaño del logo del TecNM */
+    width: 150px; /* Ajusta el tamaño del logo del TecNM */
     margin-right: auto; /* Alinea el logo del TecNM a la izquierda */
 }
 
 header .center-logo {
-    width: 170px; /* Ajusta el tamaño del logo del ITSOEH */
+    width: 150px; /* Ajusta el tamaño del logo del ITSOEH */
     margin: 0 auto; /* Centra el logo del ITSOEH */
 }
 
 header .right-logo {
-    width: 100px; /* Ajusta el tamaño del logo de Hidalgo */
+    width: 150px; /* Ajusta el tamaño del logo de Hidalgo */
     margin-left: auto; /* Alinea el logo de Hidalgo a la derecha */
 }
 
@@ -59,8 +59,8 @@ main {
 
 main h1 {
     color: #003366;
-    font-size: 28px;
-    margin: 10px 0;
+    font-size: 30px;
+    margin: 50px;
 }
 
 main h2 {
@@ -135,9 +135,4 @@ footer {
     text-align: center;
     font-size: 14px;
     width: 100%;
-}
-.Comite{
-    padding: 20px;
-    margin: 50px;
-    
 }
