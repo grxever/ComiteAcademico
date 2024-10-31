@@ -113,6 +113,7 @@ include("../modelo/conexion.php");
             .anexos-section,
             .solicitud-section {
                 display: none;
+                align-items: center;
                 margin-top: 20px;
                 background-color: #f0f0f0;
                 border-radius: 10px;
@@ -122,9 +123,10 @@ include("../modelo/conexion.php");
 
             .anexo {
                 border: 1px solid #ccc;
-                padding: 10px;
+                padding: 20px;
                 margin: 10px;
                 display: inline-block;
+                align-items: center;
                 text-align: center;
                 width: 20%;
                 background-color: #fff;
@@ -229,17 +231,20 @@ include("../modelo/conexion.php");
             <!-- Información del usuario -->
             <div class="info-section">
                 <div class="user-info">
-                    <?php
-                    $query = "SELECT nombre, matricula, carrera, semestre, grupo FROM usuarios WHERE id = :id";
-                    $stmt = $pdo->prepare($query);
-                    $stmt->bindParam(':id', $idUsuario);
-                    $stmt->execute();
-                    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+                <?php
+                    if (isset($_SESSION['usuario'])) {
+                        $nombre = $_SESSION['usuario']['nombre'];
+                        $matricula = $_SESSION['usuario']['matricula'];
+                        $carrera = $_SESSION['usuario']['carrera'];
+                        $semestre = $_SESSION['usuario']['semestre'];
+                        $grupo = $_SESSION['usuario']['grupo'];
 
-                    if ($usuario) {
-                        $_SESSION['usuario'] = $usuario;
+                        echo "<p><strong>Nombre:</strong> $nombre</p>";
+                        echo "<p><strong>Matrícula:</strong> $matricula</p>";
+                        echo "<p><strong>Carrera:</strong> $carrera</p>";
+                        echo "<p><strong>Grupo y semestre:</strong> $semestre \"$grupo\"</p>";
                     } else {
-                        echo "Error: No se encontraron los datos del usuario.";
+                        echo "<p>Error al cargar la información del usuario.</p>";
                     }
                     ?>
                 </div>
