@@ -164,22 +164,18 @@ include("../modelo/conexion.php");
             .upload-container {
                 display: flex;
                 align-items: center;
+                gap: 10px;
                 cursor: pointer;
-                gap: 10px; /* Añadir espacio entre los elementos dentro del contenedor */
-            }
-
-            .upload-container img {
-                width: 30px; /* Tamaño de la imagen ajustado */
-                height: 30px;
+                position: relative;
             }
 
             .upload-input {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
                 opacity: 0;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 0;
+                top: 0;
                 cursor: pointer;
             }
 
@@ -329,7 +325,7 @@ include("../modelo/conexion.php");
             document.getElementById('anexosBtn').addEventListener('click', function() {
                 var anexosSection = document.getElementById('anexosSection');
                 var solicitudSection = document.getElementById('solicitudSection');
-                solicitudSection.style.display = 'none'; // Ocultar la otra sección si está visible
+                solicitudSection.style.display = 'none';
                 anexosSection.style.display = anexosSection.style.display === 'none' || anexosSection.style.display === '' ? 'block' : 'none';
             });
 
@@ -337,7 +333,7 @@ include("../modelo/conexion.php");
             document.getElementById('solicitudBtn').addEventListener('click', function() {
                 var solicitudSection = document.getElementById('solicitudSection');
                 var anexosSection = document.getElementById('anexosSection');
-                anexosSection.style.display = 'none'; // Ocultar la otra sección si está visible
+                anexosSection.style.display = 'none';
                 solicitudSection.style.display = solicitudSection.style.display === 'none' || solicitudSection.style.display === '' ? 'block' : 'none';
             });
 
