@@ -1,5 +1,6 @@
 <?php
-session_start(); // Mover session_start() al principio
+session_start();
+include("../modelo/conexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -229,19 +230,16 @@ session_start(); // Mover session_start() al principio
             <div class="info-section">
                 <div class="user-info">
                     <?php
-                    if (isset($_SESSION['usuario'])) {
-                        $nombre = $_SESSION['usuario']['nombre'];
-                        $matricula = $_SESSION['usuario']['matricula'];
-                        $carrera = $_SESSION['usuario']['carrera'];
-                        $semestre = $_SESSION['usuario']['semestre'];
-                        $grupo = $_SESSION['usuario']['grupo'];
+                    $query = "SELECT nombre, matricula, carrera, semestre, grupo FROM usuarios WHERE id = :id";
+                    $stmt = $pdo->prepare($query);
+                    $stmt->bindParam(':id', $idUsuario);
+                    $stmt->execute();
+                    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                        echo "<p><strong>Nombre:</strong> $nombre</p>";
-                        echo "<p><strong>Matrícula:</strong> $matricula</p>";
-                        echo "<p><strong>Carrera:</strong> $carrera</p>";
-                        echo "<p><strong>Grupo y semestre:</strong> $semestre \"$grupo\"</p>";
+                    if ($usuario) {
+                        $_SESSION['usuario'] = $usuario;
                     } else {
-                        echo "<p>Error al cargar la información del usuario.</p>";
+                        echo "Error: No se encontraron los datos del usuario.";
                     }
                     ?>
                 </div>
