@@ -1,3 +1,16 @@
+<?php
+session_start();
+include("../modelo/conexion.php");
+
+// Verifica si el usuario ha iniciado sesión
+if (isset($_SESSION['usuario'])) {
+    $nombre = $_SESSION['usuario']['nombre'];
+    $carrera = $_SESSION['usuario']['carrera'];
+} else {
+    echo "<p>Error: No se encontró la información del usuario en la sesión.</p>";
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -6,6 +19,7 @@
         <title>Secretario</title>
         <link rel="shortcut icon" href="../img/icono.png">
         <style>
+            /* Estilos existentes */
             body {
                 margin: 0;
                 padding: 0;
@@ -52,10 +66,10 @@
                 transition: background-color 0.3s ease;
                 display: flex;
                 align-items: center;
-                gap: 5px; /* Espacio entre imagen y texto */
+                gap: 5px;
             }
             .top-bar-arriba button img {
-                width: 20px; /* Ajusta el tamaño de la imagen dentro del botón */
+                width: 20px;
                 height: 20px;
             }
             .top-bar-arriba button:hover {
@@ -102,7 +116,7 @@
                 gap: 20px;
             }
             .user-info-container img {
-                width: 110px; /* Ajusta el tamaño de la imagen del usuario */
+                width: 110px;
                 height: 100px;
             }
             .user-info {
@@ -171,8 +185,8 @@
         <div class="user-info-container">
             <img src="../img/Usuario2.png" alt="Foto del usuario"> <!-- Cambia la URL de la imagen aquí -->
             <div class="user-info">
-                <p><strong>Nombre:</strong> Santuru Gojo</p>
-                <p><strong>Carrera:</strong> 18011002</p>
+                <p><strong>Nombre:</strong> <?php echo $nombre; ?></p>
+                <p><strong>Carrera:</strong> <?php echo $carrera; ?></p>
             </div>
         </div>
 
@@ -180,9 +194,6 @@
             <button class="action-btn">Solicitudes Recientes</button>
             <button class="action-btn">Historial</button>
         </div>
-
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>
+
