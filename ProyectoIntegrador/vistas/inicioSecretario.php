@@ -18,7 +18,7 @@ if (isset($_SESSION['usuario'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Secretario</title>
         <link rel="shortcut icon" href="../img/icono.png">
-        <link rel="stylesheet" href="css/InicioSecretario.css">
+        <link rel="stylesheet" href="../css/InicioSecretario.css">
         
     </head>
     <body>

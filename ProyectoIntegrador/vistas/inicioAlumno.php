@@ -9,7 +9,7 @@ include("../modelo/conexion.php");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Comité Académico</title>
         <link rel="shortcut icon" href="../img/icono.png">
-        <link rel="stylesheet" href="css/inicioAlumno.css">
+        <link rel="stylesheet" href="../css/inicioAlumno.css">
     </head>
     <body>
         <!-- Menú de navegación -->
