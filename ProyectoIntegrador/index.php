@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Comité Académico</title>
-        <link rel="stylesheet" href="../css/Index.css">
+        <link rel="stylesheet" href="css/Index.css">
         <link rel="shortcut icon" href="img/icono.png">
     </head>
     <script>
