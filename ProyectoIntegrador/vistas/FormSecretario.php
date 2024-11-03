@@ -14,22 +14,22 @@
     <div class="top-bar-arriba">
         <div class="buttons-left">
             <button>
-                <img src="../imagenes/Home.png" alt="Icono Inicio">
+                <img src="../img/Home.png" alt="Icono Inicio">
                 Inicio
             </button>
         </div>
         <div class="buttons-right">
             <button>
-                <img src="../imagenes/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
+                <img src="../img/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
                 Cerrar Sesión
             </button>
         </div>
     </div>
 
     <div class="image-container">
-        <img id="tec" src="../imagenes/LogoTec.png" alt="Logo TecNM">
-        <img id="itsoeh" src="../imagenes/LogoItsoeh.png" alt="Logo Itsoeh">
-        <img id="hidalgo" src="../imagenes/Hidalgo.png" alt="Logo Hidalgo">
+        <img id="tec" src="../img/tecnm_logo.png" alt="Logo TecNM">
+        <img id="itsoeh" src="../img/itsoeh.png" alt="Logo Itsoeh">
+        <img id="hidalgo" src="../img/HidalgoLogo.png" alt="Logo Hidalgo">
     </div>
 
     <!-- Formulario de Registro de Estudiante -->
