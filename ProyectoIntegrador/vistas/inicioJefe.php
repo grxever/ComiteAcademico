@@ -36,7 +36,7 @@
         <div class="image-container">
             <img id="tec" src="../img/tecnm_logo.png" alt="Logo TecNM">
             <img id="itsoeh" src="../img/itsoeh.png" alt="Logo Itsoeh">
-            <img id="hidalgo" src="../img/HidalgoLogo.png alt="Logo Hidalgo">
+            <img id="hidalgo" src="../img/HidalgoLogo.png" alt="Logo Hidalgo">
         </div>
 
         <div class="title">¡Bienvenido!</div>
