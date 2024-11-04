@@ -100,7 +100,7 @@ h1 {
 
 .anexos-section,
 .solicitud-section {
-    display: none;
+    display: center;
     align-items: center;
     margin-top: 20px;
     background-color: #f0f0f0;
