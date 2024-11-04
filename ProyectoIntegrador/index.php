@@ -221,7 +221,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeForgotNipModal()">&times;</span>
                 <div class="modal-title">
-                    <img src="imagenes/Candado.png" alt="Lock Icon">
+                    <img src="../img/Candado.png" alt="Lock Icon">
                     Recuperación de PIN
                 </div>
                 <p>Por favor comunicate al  Tel. xxx xxx xxxx en los horarios de atención de 07:00 a 16:00 
