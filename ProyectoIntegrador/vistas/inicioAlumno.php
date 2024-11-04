@@ -15,11 +15,17 @@ include("../modelo/conexion.php");
         <!-- Menú de navegación -->
         <div class="nav-bar">
             <div class="left">
-                <a href="#">Inicio</a>
-                <a href="#">Solicitud</a>
+                <a href="#">
+                    <img src="../img/Home.png" alt="Inicio" class="nav-icon"> Inicio
+                </a>
+                <a href="#">
+                    <img src="../img/subrirdoc.png" alt="Solicitud" class="nav-icon"> Solicitud
+                </a>
             </div>
             <div class="right">
-                <a href="cerrarSesion.php">Cerrar Sesión</a>
+                <a href="cerrarSesion.php">
+                    <img src="../img/Cerrar Sesion.png" alt="Cerrar Sesión" class="nav-icon"> Cerrar Sesión
+                </a>
             </div>
         </div>
 

@@ -29,6 +29,12 @@ body, html {
 .nav-bar a:hover {
     text-decoration: underline;
 }
+.nav-icon {
+    width: 30px; /* Tamaño igual al texto */
+    height: 30px; /* Tamaño igual al texto */
+    fill: currentColor; /* Aplica el color del texto al ícono */
+    margin-right: 5px; /* Espacio de 2px entre el ícono y el texto */
+}
 
 /* Contenedor principal */
 .container {
@@ -146,7 +152,6 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .anexo {
     width: 180px; /* Ancho fijo para cada tarjeta */
     height: 220px; /* Altura fija */
@@ -162,13 +167,11 @@ h1 {
     text-align: center;
 }
 
-
 .anexo img {
     width: 50px; /* Tamaño del ícono */
     height: 50px;
     margin-top: 10px;
 }
-
 
 /* Pie de página fijo en la parte inferior */
 footer {
@@ -203,7 +206,6 @@ footer {
 .back-button:hover {
     background-color: #4a2f8e;
 }
-
 
 /* Contenedor de subida de archivos */
 .upload-container {
@@ -299,3 +301,30 @@ label {
 .user-info p {
     margin: 15px ;
 }
+
+.solicitud-section {
+    display: flex;
+    flex-direction: column; /* Organización vertical */
+    align-items: center; /* Centrado horizontal */
+    gap: 20px; /* Espacio entre cada elemento de la sección */
+    text-align: center; /* Centrado de texto dentro de la sección */
+}
+
+.solicitud-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho de la sección */
+    max-width: 600px; /* Limita el ancho para mejor presentación */
+    gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+.solicitud-section .upload-container {
+    width: 100%; /* Ajusta al ancho del formulario */
+    max-width: 400px; /* Limita el ancho para una buena presentación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el ícono y el nombre del archivo */
+}
+
