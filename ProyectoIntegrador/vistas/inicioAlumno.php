@@ -89,36 +89,43 @@ include("../modelo/conexion.php");
             </div>
 
 
-            <!-- Sección de solicitud -->
-            <div class="anexos-section" id="anexosSection">
-                <div class="anexosolicitud">
-                    <h3>Anexo 1</h3>
-                    <p>Análisis académico.</p>
-                    <a href="../docs/AnalisisProp.doc" download="Anexo1.docx">
-                        <img src="../img/word-icon.png" alt="Descargar Análisis académico.">
-                    </a>
-                </div>
-                <div class="anexosolicitud">
-                    <h3>Anexo 2</h3>
-                    <p>Solicitud de estudiante para el análisis del comité académico.</p>
-                    <a href="../docs/SolicitudEstudiante.docx" download="Anexo2.docx">
-                        <img src="../img/word-icon.png" alt="Descargar Solicitud de estudiante.">
-                    </a>
-                </div>
-                <div class="anexosolicitud">
-                    <h3>Anexo 3</h3>
-                    <p>Solicitud de análisis de propuesta para el comité académico.</p>
-                    <a href="../docs/AnalisisAcademico.docx" download="Anexo3.docx">
-                        <img src="../img/word-icon.png" alt="Descargar Solicitud de análisis de propuesta.">
-                    </a>
-                </div>
-                
-                <!-- Botón de enviar centrado debajo de los anexos -->
-                <div class="submit-button-container">
-                    <button type="submit" class="submit-button">Enviar</button>
-                </div>
-            </div>
 
+
+            <!-- Sección de solicitud -->
+            <div id="solicitudSection" class="solicitud-section">
+                <h2>Subir Anexos</h2>
+                <form>
+                    <label>Subir Anexo1:</label>
+                    <div class="upload-container">
+                        <div class="file-info">
+                            <img src="../img/subrirdoc.png" alt="Subir Archivo">
+                            <div id="fileName1" class="file-name">Archivo no seleccionado</div>
+                        </div>
+                        <input type="file" class="upload-input" id="fileInput1" onchange="mostrarNombreArchivo('fileInput1', 'fileName1')">
+                    </div>
+                    
+                    <label>Subir Anexo2:</label>
+                    <div class="upload-container">
+                        <div class="file-info">
+                            <img src="../img/subrirdoc.png" alt="Subir Archivo">
+                            <div id="fileName2" class="file-name">Archivo no seleccionado</div>
+                        </div>
+                        <input type="file" class="upload-input" id="fileInput2" onchange="mostrarNombreArchivo('fileInput2', 'fileName2')">
+                    </div>
+                    
+                    <label>Subir Anexo3:</label>
+                    <div class="upload-container">
+                        <div class="file-info">
+                            <img src="../img/subrirdoc.png" alt="Subir Archivo">
+                            <div id="fileName3" class="file-name">Archivo no seleccionado</div>
+                        </div>
+                        <input type="file" class="upload-input" id="fileInput3" onchange="mostrarNombreArchivo('fileInput3', 'fileName3')">
+                    </div>
+                </form>
+                <br>
+                <button id="backBtnSolicitud" class="back-button">Enviar</button>
+            </div>
+        </div>
 
         <!-- Pie de página -->
         <footer>
