@@ -22,7 +22,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh; /* Centra el contenido verticalmente */
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 /* Logo Section */
@@ -37,7 +37,7 @@ header .logos {
 }
 
 header .left-logo {
-    width: 120px; /* Tamaño del logo del TecNM */
+    width: 150px; /* Tamaño del logo del TecNM */
     margin: -25px; /* Alinea el logo a la izquierda */
 }
 
