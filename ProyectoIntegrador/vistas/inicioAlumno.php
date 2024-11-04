@@ -43,15 +43,33 @@ include("../modelo/conexion.php");
             <img id="hidalgo" src="../img/HidalgoLogo.png" alt="Logo Hidalgo">
         </div>
 
-        <div class="title">¡Bienvenido!</div>
+        <!-- Mensaje de bienvenida -->
+        <h1>¡Bienvenido!</h1>
 
-        <div class="user-info-container">
-            <img src="../img/Usuario.png" alt="Foto del usuario">
-            <div class="user-info">
-                <p><strong>Nombre Jefe:</strong> Santuru Gojo</p>
-                <p><strong>Carrera:</strong> 18011002</p>
-            </div>
-        </div>
+<!-- Información del usuario -->
+<div class="info-section">
+    <div class="user-icon">
+        <!-- Icono de usuario usando una imagen -->
+        <img src="../img/perfil.png" alt="Icono de usuario">
+    </div>
+    <div class="user-info">
+    <?php
+                    if (isset($_SESSION['usuario'])) {
+                        $nombre = $_SESSION['usuario']['nombre'];
+                        $matricula = $_SESSION['usuario']['matricula'];
+                        $carrera = $_SESSION['usuario']['carrera'];
+                        $semestre = $_SESSION['usuario']['semestre'];
+                        $grupo = $_SESSION['usuario']['grupo'];
+
+                        echo "<p><strong>Nombre:</strong> $nombre</p>";
+                        echo "<p><strong>Matrícula:</strong> $matricula</p>";
+                        echo "<p><strong>Carrera:</strong> $carrera</p>";
+                        echo "<p><strong>Grupo y semestre:</strong> $semestre \"$grupo\"</p>";
+                    } else {
+                        echo "<p>Error al cargar la información del usuario.</p>";
+                    }
+                    ?>
+</div>
 
         <!-- Botones debajo de la información -->
         <div class="buttons">
