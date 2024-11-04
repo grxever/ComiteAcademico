@@ -24,10 +24,10 @@ include("../modelo/conexion.php");
                 </button>
             </div>
             <div class="buttons-right">
-                <!-- Botón de Notificaciones -->
-                <button onclick="toggleNotificaciones()">
-                    <img src="../img/Notificaciones.png" alt="Icono Notificaciones">
-                </button>
+            <!-- Botón de Notificaciones -->
+            <button onclick="toggleNotificaciones()">
+                <img src="../img/Notificaciones.png" alt="Icono Notificaciones">
+            </button>
                 <!-- Botón de Cerrar Sesión -->
                 <button onclick="window.location.href='logout.php'">
                     <img src="../img/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
@@ -124,12 +124,29 @@ include("../modelo/conexion.php");
             <button id="backBtnSolicitud" class="back-button">Enviar</button>
         </div>
 
+        <!-- Cuadro de notificaciones -->
+    <div id="notificaciones" class="notificaciones hidden">
+        <p>No hay notificaciones por ahora</p>
+        <button onclick="closeNotificaciones()" class="close-notificaciones-btn">Cerrar</button>
+    </div>
+
         <!-- Pie de página -->
         <footer>
             © 2024 Comité Académico
         </footer>
         
         <script>
+        // Función para mostrar/ocultar el cuadro de notificaciones
+        function toggleNotificaciones() {
+                    const notificaciones = document.getElementById("notificaciones");
+                    notificaciones.classList.toggle("hidden"); // Alterna la visibilidad
+                }
+
+                // Función para cerrar el cuadro de notificaciones
+                function closeNotificaciones() {
+                    document.getElementById("notificaciones").classList.add("hidden");
+                }
+
             // Asegura que ambas secciones estén ocultas al cargar la página
             document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('anexosSection').style.display = 'none';
