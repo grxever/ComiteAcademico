@@ -1,3 +1,4 @@
+/* Reiniciar el estilo del body y html para evitar espacios en blanco */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,13 +8,16 @@ body, html {
     background-color: #f4f4f4;
 }
 
+/* Barra de navegación */
 .nav-bar {
     background-color: #003366;
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
-    font-size: 18px;
+    align-items: center;
+    padding: 30px 40px;
+    font-size: 20px;
+    margin: 0px; /* Asegúrate de que no haya margen alrededor */
 }
 
 .nav-bar a {
@@ -26,6 +30,7 @@ body, html {
     text-decoration: underline;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
     flex-direction: column;
@@ -33,31 +38,46 @@ body, html {
     align-items: center;
     min-height: 100vh;
     background-color: #f4f4f4;
+    margin: 5px; /* Evita margen alrededor del contenedor */
 }
 
+/* Sección de encabezado con los logos */
 header .logos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
-    margin: 20px 0;
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho de los logos */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0; /* Sin padding */
+    margin-top: 0; /* Sin margen superior */
 }
 
-header .left-logo,
-header .right-logo {
-    width: 150px;
+/* Estilos para cada logo individual */
+header .left-logo {
+    width: 100px; /* Ajusta el tamaño del logo de la izquierda */
+    margin-right: 200px; /* Margen solo en el lado derecho */
 }
 
 header .center-logo {
-    width: 200px;
+    width: 120px; /* Ajusta el tamaño del logo central */
+    margin: 0; /* Sin margen adicional */
 }
 
+header .right-logo {
+    width: 100px; /* Ajusta el tamaño del logo de la derecha */
+    margin-left: 200px; /* Margen solo en el lado izquierdo */
+}
+
+/* Título principal */
 h1 {
     font-size: 36px;
     color: #555;
     text-align: center;
+    margin: 20px 0;
 }
 
+/* Sección de información del usuario */
 .info-section {
     display: flex;
     justify-content: center;
@@ -75,6 +95,7 @@ h1 {
     margin: 5px 0;
 }
 
+/* Botones principales */
 .buttons {
     display: flex;
     justify-content: center;
@@ -92,42 +113,64 @@ h1 {
     font-size: 18px;
     cursor: pointer;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
     background-color: #d2c4ed;
 }
 
-.anexos-section,
+/* Secciones de solicitud */
 .solicitud-section {
     display: none;
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
     background-color: #f0f0f0;
     border-radius: 10px;
-    padding: 150px;
+    padding: 30px;
+    width: 90%; /* Reducido para pantallas más pequeñas */
+    max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.anexo {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    width: 20%;
-    background-color: #fff;
+.anexos-section {
+    display: flex; /* Hace que los elementos .anexo se dispongan en fila */
+    justify-content:center; /* Centra los elementos dentro del contenedor */
+    gap: 20px; /* Espacio entre los elementos .anexo */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas si no hay suficiente espacio */
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #f0f0f0;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
+.anexo {
+    width: 180px; /* Ancho fijo para cada tarjeta */
+    height: 220px; /* Altura fija */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
 .anexo img {
-    width: 50px;
+    width: 50px; /* Tamaño del ícono */
     height: 50px;
     margin-top: 10px;
 }
 
+
+/* Pie de página fijo en la parte inferior */
 footer {
     background-color: #003366;
     color: white;
@@ -139,6 +182,14 @@ footer {
     bottom: 0;
 }
 
+/* Botón de regresar */
+.back-button-container {
+    width: 100%; /* Toma el ancho completo del contenedor de anexos */
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 20px; /* Espacio entre los anexos y el botón */
+}
+
 .back-button {
     background-color: #5d3ba4;
     color: white;
@@ -146,9 +197,15 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
+.back-button:hover {
+    background-color: #4a2f8e;
+}
+
+
+/* Contenedor de subida de archivos */
 .upload-container {
     display: flex;
     align-items: center;
@@ -182,4 +239,63 @@ label {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    header .logos {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .anexos-section, .solicitud-section {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    gap: 20px; /* Espacio entre el icono y la información */
+}
+
+.user-icon {
+    width: 70px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-icon img {
+    width: 100px; /* La imagen se ajusta al contenedor */
+    height: 100px;
+}
+
+.user-info p {
+    margin: 15px ;
 }

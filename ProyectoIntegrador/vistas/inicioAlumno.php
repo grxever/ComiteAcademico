@@ -39,25 +39,18 @@ include("../modelo/conexion.php");
 
             <!-- Información del usuario -->
             <div class="info-section">
+                <div class="user-icon">
+                    <!-- Icono de usuario usando una imagen -->
+                    <img src="../img/perfil.png" alt="Icono de usuario">
+                </div>
                 <div class="user-info">
-                <?php
-                    if (isset($_SESSION['usuario'])) {
-                        $nombre = $_SESSION['usuario']['nombre'];
-                        $matricula = $_SESSION['usuario']['matricula'];
-                        $carrera = $_SESSION['usuario']['carrera'];
-                        $semestre = $_SESSION['usuario']['semestre'];
-                        $grupo = $_SESSION['usuario']['grupo'];
-
-                        echo "<p><strong>Nombre:</strong> $nombre</p>";
-                        echo "<p><strong>Matrícula:</strong> $matricula</p>";
-                        echo "<p><strong>Carrera:</strong> $carrera</p>";
-                        echo "<p><strong>Grupo y semestre:</strong> $semestre \"$grupo\"</p>";
-                    } else {
-                        echo "<p>Error al cargar la información del usuario.</p>";
-                    }
-                    ?>
+                    <p><strong>Nombre:</strong> Juan Pérez</p>
+                    <p><strong>Matrícula:</strong> 123456789</p>
+                    <p><strong>Carrera:</strong> Ingeniería en Sistemas</p>
+                    <p><strong>Grupo y semestre:</strong> 5 "A"</p>
                 </div>
             </div>
+
 
             <!-- Botones debajo de la información -->
             <div class="buttons">
@@ -66,7 +59,7 @@ include("../modelo/conexion.php");
             </div>
 
             <!-- Sección de anexos -->
-            <div id="anexosSection" class="anexos-section">
+            <div class="anexos-section" id="anexosSection">
                 <div class="anexo">
                     <h3>Anexo 1</h3>
                     <p>Análisis académico.</p>
@@ -88,9 +81,15 @@ include("../modelo/conexion.php");
                         <img src="../img/word-icon.png" alt="Descargar Solicitud de análisis de propuesta.">
                     </a>
                 </div>
-                <br>
-                <button id="backBtn" class="back-button">Regresar</button>
+                
+                <!-- Botón de regresar centrado debajo de los anexos -->
+                <div class="back-button-container">
+                    <button id="backBtn" class="back-button">Regresar</button>
+                </div>
             </div>
+
+
+
 
             <!-- Sección de solicitud -->
             <div id="solicitudSection" class="solicitud-section">
