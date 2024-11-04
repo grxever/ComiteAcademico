@@ -1,9 +1,13 @@
 <?php
-session_start();
+session_start(); // Inicia la sesión
 
-session_destroy();
+// Destruye todas las variables de sesión
 session_unset();
-session_abort();
 
-header('Location: http://localhost/5a-T4-php/index.php');
-die();
+// Destruye la sesión
+session_destroy();
+
+// Redirige al usuario a la página de inicio
+header("Location: index.php");
+exit(); // Termina el script
+?>

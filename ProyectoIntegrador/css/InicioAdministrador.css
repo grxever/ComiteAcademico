@@ -1,0 +1,174 @@
+/* Reset y estilo básico del body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Barra azul superior */
+.top-bar-superior {
+    width: 100%;
+    height: 25px;
+    background-color: #17369f;
+}
+
+/* Barra blanca inferior con borde */
+.top-bar-arriba {
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1.9px solid #020203;
+}
+
+/* Estilos de los botones de navegación */
+.buttons-left,
+.buttons-right {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons-left {
+    margin-left: -20px;
+}
+
+.buttons-right {
+    margin-right: 55px;
+}
+
+/* Botones en la barra de navegación */
+.top-bar-arriba button {
+    background-color: #fff;
+    border: none;
+    color: #020203;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre imagen y texto */
+}
+
+.top-bar-arriba button img {
+    width: 20px; /* Tamaño de la imagen dentro del botón */
+    height: 20px;
+}
+
+.top-bar-arriba button:hover {
+    background-color: #ccc;
+    color: #17369f;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    width: 100%;
+}
+
+/* Estilos individuales de cada imagen */
+#tec {
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    margin: -30px;
+}
+
+#itsoeh {
+    max-width: 160px;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+#hidalgo {
+    max-width: 70px;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/*------------------------------------------------*/
+
+/* Información del usuario */
+.user-info-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 20px;
+    align-items: center;
+}
+
+.user-info-container img {
+    width: 110px; /* Tamaño de la imagen del usuario */
+    height: 120px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-info p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+
+.alta-container {
+    margin: 15px auto;
+    padding: 25px 20px;
+    background-color: #d3d3d3;
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: center;
+}
+.alta-container .alta-title {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 25px;
+    color: #333;
+}
+.alta-container .alta-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.alta-container .alta-buttons button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 25px 20px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    font-weight: bold;
+}
+.alta-container .alta-buttons button:hover {
+    background-color: #d1c4e9;
+}
+.alta-container .alta-buttons button img {
+    width: 110px;
+    height: 110px;
+    display: block;
+    margin: 0 auto 10px; /* Centra la imagen en el botón */
+}

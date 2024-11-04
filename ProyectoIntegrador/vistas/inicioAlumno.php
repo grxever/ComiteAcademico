@@ -217,5 +217,5 @@ include("../modelo/conexion.php");
                 }
             }
         </script>
-    </body>
+    </body>
 </html>

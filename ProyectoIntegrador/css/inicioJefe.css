@@ -1,0 +1,312 @@
+/* Reset y estilo básico del body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Barra azul superior */
+.top-bar-superior {
+    width: 100%;
+    height: 25px;
+    background-color: #17369f;
+}
+
+/* Barra blanca inferior con borde */
+.top-bar-arriba {
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1.9px solid #020203;
+}
+
+/* Estilos de los botones de navegación */
+.buttons-left,
+.buttons-right {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons-left {
+    margin-left: -20px;
+}
+
+.buttons-right {
+    margin-right: 55px;
+}
+
+/* Botones en la barra de navegación */
+.top-bar-arriba button {
+    background-color: #fff;
+    border: none;
+    color: #020203;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre imagen y texto */
+}
+
+.top-bar-arriba button img {
+    width: 20px; /* Tamaño de la imagen dentro del botón */
+    height: 20px;
+}
+
+.top-bar-arriba button:hover {
+    background-color: #ccc;
+    color: #17369f;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    width: 100%;
+}
+
+/* Estilos individuales de cada imagen */
+#tec {
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    margin: -30px;
+}
+
+#itsoeh {
+    max-width: 160px;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+#hidalgo {
+    max-width: 70px;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* Título */
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    margin: 25px;
+}
+
+/* Información del usuario */
+.user-info-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 20px;
+    align-items: center;
+}
+
+.user-info-container img {
+    width: 110px; /* Tamaño de la imagen del usuario */
+    height: 100px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-info p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* Contenedor de botones de acción */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 10px;
+}
+
+/* Estilos de los botones de acción */
+.action-btn {
+    background-color: #eae6f3;
+    color: #5c3d80;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.05); /* Acentúa el efecto hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de la lista de solicitudes */
+#solicitudes-list {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Altura fija para que siempre sea visible */
+    overflow-y: auto;
+    transition: max-height 0.3s ease;
+}
+
+/* Estilo de la lista */
+#solicitudes-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#solicitudes-list ul li {
+    padding: 8px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    color: #888;
+    text-align: center;
+}
+
+/* Si la lista está vacía, muestra un mensaje */
+#solicitudes-list ul:empty::before {
+    content: "No hay solicitudes recientes";
+    display: block;
+    padding: 10px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Botón "Cerrar" en la parte inferior */
+.close-btn {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0 auto; /* Centrado y abajo */
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f; /* Cambia de color en hover */
+}
+
+/* Clase para mostrar la lista */
+.show {
+    max-height: 300px;
+}
+
+/* Clase para ocultar */
+.hidden {
+    display: none;
+}
+
+/* Estilo del contenedor de historial (igual al de solicitudes) */
+#historial-list {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease;
+}
+
+#historial-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#historial-list ul li {
+    padding: 8px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    color: #888;
+    text-align: center;
+}
+
+#historial-list ul:empty::before {
+    content: "No hay elementos en el historial";
+    display: block;
+    padding: 10px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Estilos del cuadro de notificaciones */
+.notificaciones {
+    position: fixed;
+    top: 20%;
+    right: 20px;
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.notificaciones p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Botón para cerrar el cuadro de notificaciones */
+.close-notificaciones-btn {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.close-notificaciones-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+
+
+
+
