@@ -12,50 +12,47 @@ include("../modelo/conexion.php");
         <link rel="stylesheet" href="../css/inicioAlumno.css">
     </head>
     <body>
-        <!-- Menú de navegación -->
-        <div class="nav-bar">
-            <div class="left">
-                <a href="#">
-                    <img src="../img/Home.png" alt="Inicio" class="nav-icon"> Inicio
-                </a>
-                <a href="#">
-                    <img src="../img/subrirdoc.png" alt="Solicitud" class="nav-icon"> Solicitud
-                </a>
-            </div>
-            <div class="right">
-                <a href="cerrarSesion.php">
-                    <img src="../img/Cerrar Sesion.png" alt="Cerrar Sesión" class="nav-icon"> Cerrar Sesión
-                </a>
-            </div>
-        </div>
-
-        <!-- Contenedor principal -->
-        <div class="container">
-            <!-- Encabezado con logos -->
-            <header>
-                <div class="logos">
-                    <img src="../img/tecnm_logo.png" alt="Logo TecNM" class="left-logo">
-                    <img src="../img/itsoeh.png" alt="Logo ITSOEH" class="center-logo">
-                    <img src="../img/HidalgoLogo.png" alt="Logo Hidalgo" class="right-logo">
+        <!-- Nueva barra azul superior -->
+    <div class="top-bar-superior"></div>
+            <!-- Barra blanca inferior con borde en la parte inferior -->
+            <div class="top-bar-arriba">
+                <div class="buttons-left">
+                    <button>
+                        <img src="../img/Home.png" alt="Icono Inicio">
+                        Inicio
+                    </button>
                 </div>
-            </header>
-
-            <!-- Mensaje de bienvenida -->
-            <h1>¡Bienvenido!</h1>
-
-            <!-- Información del usuario -->
-            <div class="info-section">
-                <div class="user-icon">
-                    <!-- Icono de usuario usando una imagen -->
-                    <img src="../img/perfil.png" alt="Icono de usuario">
+                <div class="buttons-right">
+                    <!-- Botón de Notificaciones -->
+                    <button onclick="toggleNotificaciones()">
+                        <img src="../img/Notificaciones.png" alt="Icono Notificaciones">
+                    </button>
+                    <!-- Botón de Cerrar Sesión -->
+                    <button onclick="window.location.href='logout.php'">
+                        <img src="../img/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
+                        Cerrar Sesión
+                    </button>
                 </div>
+            </div>
+
+            <!-- Contenedor de imágenes -->
+            <div class="image-container">
+                <img id="tec" src="../img/tecnm_logo.png" alt="Logo TecNM">
+                <img id="itsoeh" src="../img/itsoeh.png" alt="Logo Itsoeh">
+                <img id="hidalgo" src="../img/HidalgoLogo.png" alt="Logo Hidalgo">
+            </div>
+
+            <div class="title">¡Bienvenido!</div>
+
+            <div class="user-info-container">
+                <img src="../img/Usuario.png" alt="Foto del usuario">
                 <div class="user-info">
-                    <p><strong>Nombre:</strong> Juan Pérez</p>
-                    <p><strong>Matrícula:</strong> 123456789</p>
-                    <p><strong>Carrera:</strong> Ingeniería en Sistemas</p>
-                    <p><strong>Grupo y semestre:</strong> 5 "A"</p>
+                    <p><strong>Nombre Jefe:</strong> Santuru Gojo</p>
+                    <p><strong>Carrera:</strong> 18011002</p>
                 </div>
             </div>
+
+
 
 
             <!-- Botones debajo de la información -->
