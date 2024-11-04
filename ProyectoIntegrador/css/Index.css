@@ -9,9 +9,9 @@ body, html {
 
 /* Header and Footer Bars */
 .header-bar {
-    background-color: #003366; /* Borde superior */
-    height: 50px;
-    width: 100%;
+    width: 100%; /* Asegura que la barra ocupe todo el ancho de la página */
+    height: 35px; /* Ajusta la altura de la barra según tu preferencia */
+    background-color: #004080; /* Cambia este color por el que prefieras */
 }
 
 
@@ -37,8 +37,8 @@ header .logos {
 }
 
 header .left-logo {
-    width: 150px; /* Tamaño del logo del TecNM */
-    margin: 0; /* Alinea el logo a la izquierda */
+    width: 120px; /* Tamaño del logo del TecNM */
+    margin: -25px; /* Alinea el logo a la izquierda */
 }
 
 header .center-logo {

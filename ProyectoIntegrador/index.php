@@ -60,7 +60,7 @@
         <div class="container">
             <header>
                 <div class="logos">
-                    <img src="img/tecnm_logo.png" alt="Logo TecNM" class="left-logo">
+                    <img src="img/logoTec.png" alt="Logo TecNM" class="left-logo">
                     <img src="img/itsoeh.png" alt="Logo ITSOEH" class="center-logo">
                     <img src="img/HidalgoLogo.png" alt="Logo Hidalgo" class="right-logo">
                 </div>
