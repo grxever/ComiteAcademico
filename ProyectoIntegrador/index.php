@@ -8,54 +8,77 @@
         <link rel="shortcut icon" href="img/icono.png">
     </head>
     <script>
-        function validarFormulario(event) {
-            event.preventDefault();
-            const matricula = document.getElementById("matricula").value;
-            const nip = document.getElementById("nip").value;
-            if (matricula === '' || nip === '') {
-                alert('Por favor, ingresa todos los datos.');
+    function validarFormulario(event) {
+        event.preventDefault();
+
+        const matricula = document.getElementById("matricula").value;
+        const nip = document.getElementById("nip").value;
+
+        if (matricula === '' || nip === '') {
+            alert('Por favor, ingresa todos los datos.');
+            return;
+        }
+
+        // Verifica si el campo de entrada es un correo (contiene '@')
+        let esCorreo = matricula.includes('@');
+        
+        if (esCorreo) {
+            // Verificar que el correo tenga el dominio @itsoeh.edu.mx
+            if (!matricula.endsWith('@itsoeh.edu.mx')) {
+                alert('Por favor, usa el correo institucional');
                 return;
             }
-            let esCorreo = matricula.includes('@');
-            if (esCorreo) {
-                if (matricula.length >= 19 && matricula.length <= 29) {
-                    if (nip !== 'password123') {
-                        alert('NIP incorrecto para jefe de carrera.');
-                        return;
-                    }
-                    alert('Has iniciado sesión como jefe de carrera.');
-                } else if (matricula.length === 32) {
-                    if (nip !== 'password123') {
-                        alert('NIP incorrecto para secretario académico.');
-                        return;
-                    }
-                    alert('Has iniciado sesión como secretario académico.');
-                } else if (matricula.length === 35) {
-                    if (nip !== 'password123') {
-                        alert('NIP incorrecto para administrador.');
-                        return;
-                    }
-                    alert('Has iniciado sesión como administrador.');
-                } else {
-                    alert('Correo incorrecto. Verifica que ingresaste el correo correctamente.');
+
+            // Verificar si es jefe de carrera, secretario o administrador basado en la longitud del correo
+            if (matricula.length >= 19 && matricula.length <= 29) {
+                // Es jefe de carrera
+                if (nip !== 'password123') {
+                    alert('NIP incorrecto para jefe de carrera.');
                     return;
                 }
+                alert('Has iniciado sesión como jefe de carrera.');
+            } else if (matricula.length === 32) {
+                // Es secretario académico
+                if (nip !== 'password123') {
+                    alert('NIP incorrecto para secretario académico.');
+                    return;
+                }
+                alert('Has iniciado sesión como secretario académico.');
+            } else if (matricula.length === 35){
+                if (nip !== 'password123') {
+                    alert('NIP incorrecto para administrador.');
+                    return;
+                }
+                alert('Has iniciado sesión como administrador.');
             } else {
-                if (matricula.length !== 8) {
-                    alert('Matrícula incorrecta para estudiante.');
-                    return;
-                }
-                const nipCorrecto = matricula.slice(-4);
-                if (nip !== nipCorrecto) {
-                    alert('NIP incorrecto para estudiante.');
-                    return;
-                }
-                alert('Has iniciado sesión como estudiante.');
+                alert('Correo incorrecto. Verifica que ingresaste el correo correctamente.');
+                return;
             }
-            document.forms["loginForm"].submit();
+        } else {
+            // Valida al estudiante por longitud de matrícula (debe ser de 8 caracteres)
+            if (matricula.length !== 8) {
+                alert('Matrícula incorrecta para estudiante.');
+                return;
+            }
+            // El NIP debe ser exactamente de 4 dígitos
+            if (nip.length !== 4) {
+                alert('El NIP para estudiantes debe ser de 4 dígitos.');
+                return;
+            }
+
+            // El NIP es los últimos 4 dígitos de la matrícula
+            const nipCorrecto = matricula.slice(-4);
+            if (nip !== nipCorrecto) {
+                alert('NIP incorrecto para estudiante.');
+                return;
+            }
+            alert('Has iniciado sesión como estudiante.');
         }
-    </script>
-    <body>
+        
+        document.forms["loginForm"].submit(); // Envía el formulario si todo es correcto
+    }
+</script>
+<body>
         <div class="header-bar"></div>
         <div class="container">
             <header>
