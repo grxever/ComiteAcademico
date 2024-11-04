@@ -134,41 +134,51 @@ include("../modelo/conexion.php");
         
         <script>
             // Mostrar y ocultar la sección de anexos
-            document.getElementById('anexosBtn').addEventListener('click', function() {
-                var anexosSection = document.getElementById('anexosSection');
-                var solicitudSection = document.getElementById('solicitudSection');
-                solicitudSection.style.display = 'none';
-                anexosSection.style.display = anexosSection.style.display === 'none' || anexosSection.style.display === '' ? 'block' : 'none';
-            });
+        document.getElementById('anexosBtn').addEventListener('click', function() {
+            var anexosSection = document.getElementById('anexosSection');
+            var solicitudSection = document.getElementById('solicitudSection');
+            
+            // Oculta la sección de solicitud
+            solicitudSection.style.display = 'none';
+            
+            // Muestra la sección de anexos en formato de fila
+            anexosSection.style.display = anexosSection.style.display === 'none' || anexosSection.style.display === '' ? 'flex' : 'none';
+        });
 
-            // Mostrar y ocultar la sección de solicitud
-            document.getElementById('solicitudBtn').addEventListener('click', function() {
-                var solicitudSection = document.getElementById('solicitudSection');
-                var anexosSection = document.getElementById('anexosSection');
-                anexosSection.style.display = 'none';
-                solicitudSection.style.display = solicitudSection.style.display === 'none' || solicitudSection.style.display === '' ? 'block' : 'none';
-            });
+        // Mostrar y ocultar la sección de solicitud
+        document.getElementById('solicitudBtn').addEventListener('click', function() {
+            var solicitudSection = document.getElementById('solicitudSection');
+            var anexosSection = document.getElementById('anexosSection');
+            
+            // Oculta la sección de anexos
+            anexosSection.style.display = 'none';
+            
+            // Muestra la sección de solicitud
+            solicitudSection.style.display = solicitudSection.style.display === 'none' || solicitudSection.style.display === '' ? 'block' : 'none';
+        });
 
-            // Ocultar las secciones cuando se presiona el botón "Regresar"
-            document.getElementById('backBtn').addEventListener('click', function() {
-                document.getElementById('anexosSection').style.display = 'none';
-            });
+        // Ocultar la sección de anexos cuando se presiona el botón "Regresar"
+        document.getElementById('backBtn').addEventListener('click', function() {
+            document.getElementById('anexosSection').style.display = 'none';
+        });
 
-            document.getElementById('backBtnSolicitud').addEventListener('click', function() {
-                document.getElementById('solicitudSection').style.display = 'none';
-            });
+        // Ocultar la sección de solicitud cuando se presiona el botón "Enviar"
+        document.getElementById('backBtnSolicitud').addEventListener('click', function() {
+            document.getElementById('solicitudSection').style.display = 'none';
+        });
 
-            // Mostrar el nombre del archivo seleccionado
-            function mostrarNombreArchivo(inputId, fileNameId) {
-                var fileInput = document.getElementById(inputId);
-                var fileName = document.getElementById(fileNameId);
+        // Mostrar el nombre del archivo seleccionado
+        function mostrarNombreArchivo(inputId, fileNameId) {
+            var fileInput = document.getElementById(inputId);
+            var fileName = document.getElementById(fileNameId);
 
-                if (fileInput.files.length > 0) {
-                    fileName.textContent = fileInput.files[0].name;
-                } else {
-                    fileName.textContent = 'Archivo no seleccionado';
-                }
+            if (fileInput.files.length > 0) {
+                fileName.textContent = fileInput.files[0].name;
+            } else {
+                fileName.textContent = 'Archivo no seleccionado';
             }
+        }
+
         </script>
     </body>
 </html>

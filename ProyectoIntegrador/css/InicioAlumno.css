@@ -134,10 +134,11 @@ h1 {
 }
 
 .anexos-section {
-    display: flex; /* Hace que los elementos .anexo se dispongan en fila */
-    justify-content:center; /* Centra los elementos dentro del contenedor */
-    gap: 20px; /* Espacio entre los elementos .anexo */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas si no hay suficiente espacio */
+    display: none; /* Hace que los anexos estén ocultos al cargar la página */
+    flex-direction: row; /* Asegura que estén en fila */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
     padding: 30px;
     background-color: #f0f0f0;
