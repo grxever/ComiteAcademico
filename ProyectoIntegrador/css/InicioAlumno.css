@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    align-items: center;
 }
 
 /* Barra azul superior */
@@ -36,11 +37,11 @@ body {
 }
 
 .buttons-left {
-    margin-left: -20px;
+    margin: 20px;
 }
 
 .buttons-right {
-    margin-right: 55px;
+    margin: 45px;
 }
 
 /* Botones en la barra de navegación */
@@ -57,7 +58,9 @@ body {
     display: flex;
     align-items: center;
     gap: 5px; /* Espacio entre imagen y texto */
+    margin: 5px 25px;
 }
+
 
 .top-bar-arriba button img {
     width: 20px; /* Tamaño de la imagen dentro del botón */
@@ -136,7 +139,7 @@ body {
 .buttons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 .button {
@@ -160,8 +163,8 @@ body {
 /* Secciones de solicitud */
 .solicitud-section {
     display: none;
-    align-items: center;
-    margin-top: 20px;
+    align-items:end;
+    margin: 20px;
     background-color: #f0f0f0;
     border-radius: 10px;
     padding: 30px;
