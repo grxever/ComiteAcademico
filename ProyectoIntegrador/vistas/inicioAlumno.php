@@ -135,7 +135,7 @@
                 solicitudContainer.style.display = "none";
             }
 
-            // Toggle modalAnexos
+            // Toggle modalAnexosbbbb
             modalAnexos.style.display = (modalAnexos.style.display === "none" || modalAnexos.style.display === "") ? "flex" : "none";
         }
 
