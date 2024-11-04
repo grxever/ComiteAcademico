@@ -86,7 +86,7 @@
             <footer>
                 <p>
                     Ingresa tu matrícula y pin (últimos 4 dígitos de tu matrícula), 
-                    aquí podrás: Realizar tu solicitud Académica para el comité académico,
+                    aquí podrás: REFSHFSFH tu solicitud Académica para el comité académico,
                     podrás visualizar tu seguimiento.
                 </p>
             </footer>
