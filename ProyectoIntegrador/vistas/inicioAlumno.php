@@ -33,9 +33,9 @@
     </div>
 
     <div class="image-container">
-        <img id="tec" src="../img/LogoTec.png" alt="Logo TecNM">
-        <img id="itsoeh" src="../img/LogoItsoeh.png" alt="Logo Itsoeh">
-        <img id="hidalgo" src="../img/Hidalgo.png" alt="Logo Hidalgo">
+        <img id="tec" src="../img/tecnm_logo.png" alt="Logo TecNM">
+        <img id="itsoeh" src="../img/itsoeh.png" alt="Logo Itsoeh">
+        <img id="hidalgo" src="../img/HidalgoLogo.png" alt="Logo Hidalgo">
     </div>
 
     <div class="title">¡Bienvenido!</div>
@@ -63,7 +63,7 @@
 
         <div class="upload-field">
             <label for="anexo1">
-                <img src="../img/word.png" alt="Icono de archivo">
+                <img src="../img/word-icon.png" alt="Icono de archivo">
                 Subir Anexo1:
             </label>
             <input type="file" id="anexo1" onchange="displayFileName(this)">
@@ -72,7 +72,7 @@
 
         <div class="upload-field">
             <label for="anexo2">
-                <img src="../img/word.png" alt="Icono de archivo">
+                <img src="../img/word-icon.png" alt="Icono de archivo">
                 Subir Anexo2:
             </label>
             <input type="file" id="anexo2" onchange="displayFileName(this)">
@@ -81,7 +81,7 @@
 
         <div class="upload-field">
             <label for="anexo3">
-                <img src="../img/word.png" alt="Icono de archivo">
+                <img src="../img/word-icon.png" alt="Icono de archivo">
                 Subir Anexo3:
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
@@ -97,17 +97,24 @@
             <div class="anexo-card" onclick="alert('Abrir Anexo 1')">
                 <div class="anexo-title">Anexo 1</div>
                 <div class="anexo-content">Análisis académico.</div>
-                <img src="../img/word.png" alt="Word Icon" class="word-icon">
+                <a href="../docs/AnalisisAcademico.docx" download="Anexo1.docx">
+                <img src="../img/word-icon.png" alt="Word Icon" class="word-icon">
+                </a>
             </div>
             <div class="anexo-card" onclick="alert('Abrir Anexo 2')">
                 <div class="anexo-title">Anexo 2</div>
                 <div class="anexo-content">Solicitud de estudiante para el análisis del comité académico.</div>
-                <img src="../img/word.png" alt="Word Icon" class="word-icon">
+                <div class="anexo-content">Análisis académico.</div>
+                <a href="../docs/AnalisisProp.docx" download="Anexo2.docx">
+                <img src="../img/word-icon.png" alt="Word Icon" class="word-icon">
+                </a>
             </div>
             <div class="anexo-card" onclick="alert('Abrir Anexo 3')">
                 <div class="anexo-title">Anexo 3</div>
                 <div class="anexo-content">Solicitud de análisis de propuesta para el comité académico.</div>
-                <img src="../img/word.png" alt="Word Icon" class="word-icon">
+                <a href="../docs/SolicitudEstudiantes.docx" download="Anexo3.docx">
+                <img src="../img/word-icon.png" alt="Word Icon" class="word-icon">
+                </a>
             </div>
         </div>
         <button class="back-btn" onclick="toggleAnexos()">Regresar</button>
