@@ -132,7 +132,9 @@ body {
 .buttons {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio entre la información del usuario y los botones */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
 }
 
 .button {
@@ -141,7 +143,6 @@ body {
     border-radius: 15px;
     color: #5d3ba4;
     padding: 15px 30px;
-    margin: 0 20px;
     text-align: center;
     font-size: 18px;
     cursor: pointer;
@@ -151,6 +152,38 @@ body {
 
 .button:hover {
     background-color: #d2c4ed;
+}
+
+/* Ajustes adicionales para la sección de información del usuario */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    gap: 20px; /* Espacio entre el icono de usuario y la información */
+}
+
+.user-icon {
+    width: 70px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-icon img {
+    width: 100px; /* Tamaño de la imagen del icono de usuario */
+    height: 100px;
+}
+
+.user-info {
+    text-align: left;
+}
+
+.user-info p {
+    margin: 5px 0;
+    font-size: 18px;
 }
 
 /* Secciones de solicitud */
@@ -346,6 +379,7 @@ label {
     justify-content: center;
     gap: 10px;
 }
+
 /* Estilos del cuadro de notificaciones */
 .notificaciones {
     position: fixed;
@@ -388,4 +422,3 @@ label {
 .hidden {
     display: none;
 }
-
