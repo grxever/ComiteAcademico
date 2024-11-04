@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicioAlumno.css">
     <title>Estudiante</title>
     <style>
     </style>
@@ -12,35 +13,35 @@
     <div class="top-bar-arriba">
         <div class="buttons-left">
             <button>
-                <img src="../imagenes/Home.png" alt="Icono Inicio">
+                <img src="../img/Home.png" alt="Icono Inicio">
                 Inicio
             </button>
             <button onclick="toggleButtons()">
-                <img src="../imagenes/Agregar.png" alt="Icono Solicitud">
+                <img src="../img/Agregar.png" alt="Icono Solicitud">
                 Solicitud
             </button>
         </div>
         <div class="buttons-right">
             <button>
-                <img src="../imagenes/Notificaciones.png" alt="Icono Notificaciones">
+                <img src="../img/Notificaciones.png" alt="Icono Notificaciones">
             </button>
             <button>
-                <img src="../imagenes/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
+                <img src="../img/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
                 Cerrar Sesión
             </button>
         </div>
     </div>
 
     <div class="image-container">
-        <img id="tec" src="../imagenes/LogoTec.png" alt="Logo TecNM">
-        <img id="itsoeh" src="../imagenes/LogoItsoeh.png" alt="Logo Itsoeh">
-        <img id="hidalgo" src="../imagenes/Hidalgo.png" alt="Logo Hidalgo">
+        <img id="tec" src="../img/LogoTec.png" alt="Logo TecNM">
+        <img id="itsoeh" src="../img/LogoItsoeh.png" alt="Logo Itsoeh">
+        <img id="hidalgo" src="../img/Hidalgo.png" alt="Logo Hidalgo">
     </div>
 
     <div class="title">¡Bienvenido!</div>
 
     <div class="user-info-container">
-        <img src="../imagenes/Usuario2.png" alt="Foto del usuario">
+        <img src="../img/Usuario2.png" alt="Foto del usuario">
         <div class="user-info">
             <p><strong>Nombre:</strong> Santuru Gojo</p>
             <p><strong>Matrícula:</strong> 18011002</p>
@@ -62,7 +63,7 @@
 
         <div class="upload-field">
             <label for="anexo1">
-                <img src="../imagenes/word.png" alt="Icono de archivo">
+                <img src="../img/word.png" alt="Icono de archivo">
                 Subir Anexo1:
             </label>
             <input type="file" id="anexo1" onchange="displayFileName(this)">
@@ -71,7 +72,7 @@
 
         <div class="upload-field">
             <label for="anexo2">
-                <img src="../imagenes/word.png" alt="Icono de archivo">
+                <img src="../img/word.png" alt="Icono de archivo">
                 Subir Anexo2:
             </label>
             <input type="file" id="anexo2" onchange="displayFileName(this)">
@@ -80,7 +81,7 @@
 
         <div class="upload-field">
             <label for="anexo3">
-                <img src="../imagenes/word.png" alt="Icono de archivo">
+                <img src="../img/word.png" alt="Icono de archivo">
                 Subir Anexo3:
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
@@ -96,17 +97,17 @@
             <div class="anexo-card" onclick="alert('Abrir Anexo 1')">
                 <div class="anexo-title">Anexo 1</div>
                 <div class="anexo-content">Análisis académico.</div>
-                <img src="../imagenes/word.png" alt="Word Icon" class="word-icon">
+                <img src="../img/word.png" alt="Word Icon" class="word-icon">
             </div>
             <div class="anexo-card" onclick="alert('Abrir Anexo 2')">
                 <div class="anexo-title">Anexo 2</div>
                 <div class="anexo-content">Solicitud de estudiante para el análisis del comité académico.</div>
-                <img src="../imagenes/word.png" alt="Word Icon" class="word-icon">
+                <img src="../img/word.png" alt="Word Icon" class="word-icon">
             </div>
             <div class="anexo-card" onclick="alert('Abrir Anexo 3')">
                 <div class="anexo-title">Anexo 3</div>
                 <div class="anexo-content">Solicitud de análisis de propuesta para el comité académico.</div>
-                <img src="../imagenes/word.png" alt="Word Icon" class="word-icon">
+                <img src="../img/word.png" alt="Word Icon" class="word-icon">
             </div>
         </div>
         <button class="back-btn" onclick="toggleAnexos()">Regresar</button>
