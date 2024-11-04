@@ -105,14 +105,14 @@
                 <div class="anexo-title">Anexo 2</div>
                 <div class="anexo-content">Solicitud de estudiante para el análisis del comité académico.</div>
                 <div class="anexo-content">Análisis académico.</div>
-                <a href="../docs/AnalisisProp.docx" download="Anexo2.docx">
+                <a href="../docs/AnalisisProp.doc" download="Anexo2.docx">
                 <img src="../img/word-icon.png" alt="Word Icon" class="word-icon">
                 </a>
             </div>
             <div class="anexo-card" onclick="alert('Abrir Anexo 3')">
                 <div class="anexo-title">Anexo 3</div>
                 <div class="anexo-content">Solicitud de análisis de propuesta para el comité académico.</div>
-                <a href="../docs/SolicitudEstudiantes.docx" download="Anexo3.docx">
+                <a href="../docs/SolicitudEstudiante.docx" download="Anexo3.docx">
                 <img src="../img/word-icon.png" alt="Word Icon" class="word-icon">
                 </a>
             </div>
