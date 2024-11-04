@@ -42,7 +42,7 @@
         <div class="title">¡Bienvenido!</div>
 
         <div class="user-info-container">
-            <img src="../img/Usuario2.png" alt="Foto del usuario"> <!-- Cambia la URL de la imagen aquí -->
+            <img src="../img/Usuario.png" alt="Foto del usuario"> <!-- Cambia la URL de la imagen aquí -->
             <div class="user-info">
                 <p><strong>Nmobre Jefe:</strong> Santuru Gojo</p>
                 <p><strong>Carrera:</strong> 18011002</p>
