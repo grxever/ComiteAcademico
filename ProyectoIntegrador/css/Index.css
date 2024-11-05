@@ -30,55 +30,55 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: -10px;
+    margin: 30px;
 }
 #tec {
     max-width: 140px;
     width: 50%;
     height: auto;
-    margin: 0 -4px;
+    margin: 20px;
 }
 #itsoeh {
     max-width: 150px;
     width: 450%;
     height: auto;
-    margin: 0 -20px;
+    margin: 20px;
 }
 #hidalgo {
     max-width: 60px;
     width: 50%;
     height: auto;
-    margin: 0 20px;
+    margin: 20px;
 }
 .title {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
-    margin: -1px 0 10px;
+    margin: 20px;
 }
 .subtitle {
     text-align: center;
     font-size: 24px;
-    margin-bottom: 4px;
+    margin: 15px;
 }
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 .form-container img {
     width: 80px;
     height: 80px;
-    margin-bottom: 5px;
+    margin: 15px;
 }
 .form-group {
-    margin-bottom: 15px;
+    margin: 5px;
     width: 300px;
 }
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin: 5px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -96,6 +96,7 @@ body {
 .submit-btn {
     width: 300px;
     padding: 10px;
+    margin: 10px;
     background-color: #17369f;
     color: white;
     border: none;
