@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comité Académico</title>
+    <link rel="stylesheet" href="css/prueba.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="title">Comité Académico</div>
+            <div class="subtitle">Ingresa</div>
+
+            <div class="form-container">
+                <div class="form-group">
+                    <div class="input-container">
+                        <span class="icon">&#128100;</span> <!-- Ícono de usuario -->
+                        <input type="text" placeholder="Matrícula" id="matricula">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-container">
+                        <span class="icon">&#128274;</span> <!-- Ícono de candado -->
+                        <input type="password" placeholder="NIP" id="nip">
+                    </div>
+                </div>
+
+                <button class="submit-btn">Entrar</button>
+
+                <div class="forgot-link">
+                    <a href="javascript:void(0);" onclick="showForgotNipModal()">¿Olvidaste tu NIP?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showForgotNipModal() {
+            document.getElementById("forgotNipModal").style.display = "block";
+        }
+
+        function closeForgotNipModal() {
+            document.getElementById("forgotNipModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("forgotNipModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
