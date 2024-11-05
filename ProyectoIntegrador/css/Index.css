@@ -6,11 +6,13 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
+
 .top-bar-arriba {
     width: 100%;
     height: 35px;
     background-color: #17369f;
 }
+
 .top-bar-abajo {
     width: 100%;
     height: 60px;
@@ -26,107 +28,131 @@ body {
     padding: 5px;
     box-sizing: border-box;
 }
+
 .image-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 30px;
 }
-#tec {
-    max-width: 140px;
-    width: 50%;
+
+#tec, #itsoeh, #hidalgo {
+    max-width: 175px;
     height: auto;
     margin: 20px;
 }
-#itsoeh {
-    max-width: 150px;
-    width: 450%;
-    height: auto;
-    margin: 20px;
-}
-#hidalgo {
-    max-width: 60px;
-    width: 50%;
-    height: auto;
-    margin: 20px;
-}
+
 .title {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
     margin: 20px;
 }
+
 .subtitle {
     text-align: center;
     font-size: 24px;
     margin: 15px;
 }
+
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 15px;
 }
+
 .form-container img {
     width: 80px;
     height: 80px;
     margin: 15px;
 }
+
 .form-group {
-    margin: 5px;
-    width: 300px;
-}
-.form-group label {
-    display: block;
-    margin: 5px;
-    font-weight: bold;
-    font-size: 14px;
-}
-.form-group input {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+    margin: 15px;
 }
-.form-group input:focus {
+
+/* Estilo de los campos de entrada */
+.input-container {
+    position: relative;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo del input */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 10px 15px;
+}
+
+.icon {
+    font-size: 18px;
+    color: #000000;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: none;
     outline: none;
-    border-color: #17369f;
+    font-size: 16px;
+    width: 100%;
+    background: transparent; /* Sin fondo adicional */
+    color: #333; /* Color del texto */
 }
+
+input::placeholder {
+    color: #333;
+}
+
 .submit-btn {
     width: 300px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #17369f;
-    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: rgb(44, 85, 128); /* Fondo blanco */
+    color: #ffffff; /* Color del texto similar al azul oscuro */
     border: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Bordes redondeados */
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+    transition: transform 0.2s ease; /* Suaviza la animación */
 }
+
 .submit-btn:hover {
-    background-color: #142d7a;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
 }
+
+.submit-btn:active {
+    transform: scale(1); /* Vuelve al tamaño normal al hacer clic */
+}
+
 .forgot-link {
     text-align: center;
     margin-top: 10px;
 }
+
 .forgot-link a {
     color: #17369f;
     text-decoration: none;
     cursor: pointer;
 }
-/* Modal styling */
+
+/* Estilos del modal */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
     background-color: white;
     margin: 15% auto;
@@ -137,6 +163,7 @@ body {
     border-radius: 8px;
     text-align: center;
 }
+
 .close {
     color: #aaa;
     float: right;
@@ -144,12 +171,14 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+
 .modal-title {
     display: flex;
     align-items: center;
@@ -157,11 +186,13 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
 .modal-title img {
     width: 24px;
     height: 24px;
     margin-right: 8px;
 }
+
 .ok-btn {
     margin-top: 15px;
     padding: 10px 20px;
@@ -172,6 +203,7 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
 .ok-btn:hover {
     background-color: #142d7a;
 }
