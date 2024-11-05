@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/inicioAlumno.css">
     <title>Estudiante</title>
-    <style>
-    </style>
 </head>
 <body>
     <div class="top-bar-superior"></div>
