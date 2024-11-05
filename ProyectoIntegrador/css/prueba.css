@@ -1,0 +1,122 @@
+/* Fondo desenfocado */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url('fondo.jpg') center/cover no-repeat; /* Imagen de fondo */
+    background-size: cover;
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra oscura transparente sobre la imagen de fondo */
+}
+
+.login-box {
+    width: 500px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #455a64; /* Fondo oscuro para el login box */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #b0bec5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para los campos de entrada */
+.form-container {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #78909c;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.icon {
+    color: #eceff1;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #eceff1;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #cfd8dc;
+}
+
+/* Estilos para el botón */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffccbc;
+    color: #37474f;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffab91;
+}
+
+/* Estilos para el enlace "¿Olvidaste tu NIP?" */
+.forgot-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-link a {
+    color: #ffccbc;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
