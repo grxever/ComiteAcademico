@@ -40,12 +40,23 @@
 
     <div class="user-info-container">
         <img src="../img/Usuario2.png" alt="Foto del usuario">
-        <div class="user-info">
-            <p><strong>Nombre:</strong> Santuru Gojo</p>
-            <p><strong>Matrícula:</strong> 18011002</p>
-            <p><strong>Carrera:</strong> Sistemas Computacionales</p>
-            <p><strong>Grupo y semestre:</strong> 9° "A"</p>
-        </div>
+        <?php
+            session_start();
+            if (isset($_SESSION['usuario'])) {
+                $nombre = $_SESSION['usuario']['nombre'];
+                $matricula = $_SESSION['usuario']['matricula'];
+                $carrera = $_SESSION['usuario']['carrera'];
+                $semestre = $_SESSION['usuario']['semestre'];
+                $grupo = $_SESSION['usuario']['grupo'];
+
+                echo "<p><strong>Nombre:</strong> $nombre</p> <br>";
+                echo "<p><strong>Matrícula:</strong> $matricula</p> <br>";
+                echo "<p><strong>Carrera:</strong> $carrera</p> <br>";
+                echo "<p><strong>Grupo y semestre:</strong> $semestre \"$grupo\"</p> <br>";
+            } else {
+                echo "<p>Error al cargar la información del usuario.</p>";
+            }
+        ?>
     </div>
 
     <!-- Additional buttons that appear when 'Solicitud' is clicked -->
