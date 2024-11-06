@@ -107,9 +107,9 @@ input::placeholder {
 }
 
 .submit-btn {
-    width: 300px;
+    width: 100%;
     padding: 15px;
-    margin-bottom: 10px;
+    margin: 10px;
     background-color: rgb(44, 85, 128); /* Fondo blanco */
     color: #ffffff; /* Color del texto similar al azul oscuro */
     border: none;
