@@ -40,7 +40,7 @@
     <div class="title">¡Bienvenido!</div>
 
     <div class="user-info-container">
-        <img src="../img/Usuario.png" alt="Foto del usuario">
+        <img src="../img/Alumno.png" alt="Foto del usuario">
         <?php
             session_start();
             if (isset($_SESSION['usuario'])) {
