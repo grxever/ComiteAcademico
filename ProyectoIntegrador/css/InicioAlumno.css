@@ -1,238 +1,252 @@
-        /* Existing styles remain the same */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-        .top-bar-superior {
-            width: 100%;
-            height: 15px;
-            background-color: #17369f;
-        }
-        .top-bar-arriba {
-            width: 100%;
-            height: 42px;
-            background-color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            border-bottom: 1.9px solid #020203;
-        }
-        .buttons-left {
-            display: flex;
-            gap: 15px;
-            margin-left: -20px;
-        }
-        .buttons-right {
-            display: flex;
-            gap: 15px;
-            margin-right: 55px;
-        }
-        .top-bar-arriba button {
-            background-color: #fff;
-            border: none;
-            color: #020203;
-            padding: 10px 15px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .top-bar-arriba button img {
-            width: 20px;
-            height: 20px;
-        }
-        .top-bar-arriba button:hover {
-            background-color: #ccc;
-            color: #17369f;
-        }
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px 15px;
-            width: 100%;
-        }
-        #tec {
-            max-width: 150px;
-            width: auto;
-            height: auto;
-            margin: -30px;
-        }
-        #itsoeh {
-            max-width: 190px;
-            width: auto;
-            height: auto;
-            margin: 0;
-        }
-        #hidalgo {
-            max-width: 70px;
-            width: auto;
-            height: auto;
-            margin: 0;
-        }
-        .title {
-            text-align: center;
-            font-size: 42px;
-            font-weight: bold;
-            color: #bcb6b6;
-            margin: 20px 15px;
-        }
-        .user-info-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-            gap: 20px;
-        }
-        .buttons-container {
-            display: none; /* Initially hidden */
-            justify-content: center;
-            gap: 80px;
-            margin-top: 10px;
-        }
-        .action-btn {
-            background-color: #eae6f3;
-            color: #5c3d80;
-            border: none;
-            border-radius: 10px;
-            padding: 15px 30px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
-        .action-btn:hover {
-            background-color: #d1c4e9;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.top-bar-superior {
+    width: 100%;
+    height: 15px;
+    background-color: #17369f;
+}
+.top-bar-arriba {
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1.9px solid #020203;
+}
+.buttons-left {
+    display: flex;
+    gap: 15px;
+    margin-left: -20px;
+}
+.buttons-right {
+    display: flex;
+    gap: 15px;
+    margin-right: 55px;
+}
+.top-bar-arriba button {
+    background-color: #fff;
+    border: none;
+    color: #020203;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.top-bar-arriba button img {
+    width: 20px;
+    height: 20px;
+}
+.top-bar-arriba button:hover {
+    background-color: #ccc;
+    color: #17369f;
+}
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 15px;
+    width: 100%;
+}
+#tec {
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    margin: -30px;
+}
+#itsoeh {
+    max-width: 190px;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+#hidalgo {
+    max-width: 70px;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: #bcb6b6;
+    margin: 20px 15px;
+}
+.user-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+.buttons-container {
+    display: none;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 10px;
+}
+.action-btn {
+    background-color: #eae6f3;
+    color: #5c3d80;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+.action-btn:hover {
+    background-color: #d1c4e9;
+}
 
-        /* Solicitud Container */
-        .solicitud-container {
-            display: none; /* Initially hidden */
-            margin: 20px auto; /* Center horizontally */
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            text-align: center;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        .solicitud-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 15px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .upload-field {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
-        .upload-field label {
-            font-size: 14px;
-            color: #555;
-            display: flex;
-            align-items: center;
-        }
-        .upload-field img {
-            width: 35px;
-            height: 35px;
-            margin-right: 10px;
-        }
-        .upload-field input[type="file"] {
-            display: none;
-        }
-        .file-name {
-            font-size: 12px;
-            color: #888;
-            flex-grow: 1;
-            text-align: right;
-            padding-right: 10px;
-        }
-        .submit-btn {
-            background-color: #6a1b9a;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            width: 100%;
-        }
-        .submit-btn:hover {
-            background-color: #5a137a;
-        }
+/* Solicitud Container */
+.solicitud-container {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.solicitud-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.upload-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.upload-field label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+.upload-field img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.upload-field input[type="file"] {
+    display: none;
+}
+.file-name {
+    font-size: 12px;
+    color: #888;
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 10px;
+}
 
-        /* Modal Styles for Anexos */
-        .modal-container {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            margin: 20px;
-            gap: 15px;
-        }
-        .anexos-row {
-            display: flex;
-            gap: 20px;
-        }
-        .anexo-card {
-            width: 200px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .anexo-card:hover {
-            background-color: #e0e0e0;
-        }
-        .anexo-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .anexo-content {
-            margin-bottom: 10px;
-        }
-        .back-btn {
-            background-color: #d1c4e9;
-            color: #5c3d80;
-            border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
-        }
-        .back-btn:hover {
-            background-color: #b39ddb;
-        }
+/* Icono de eliminar */
+.delete-icon {
+    font-size: 25px;
+    color: #ff4c4c;
+    cursor: pointer;
+    margin-left: 20px;
+    display: none; /* Oculto por defecto */
+}
+
+.upload-field.show-delete .delete-icon {
+    display: inline; /* Muestra el icono cuando se agrega la clase show-delete */
+}
+
+.submit-btn {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+.submit-btn:hover {
+    background-color: #5a137a;
+}
+
+/* Modal Styles for Anexos */
+.modal-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: 20px;
+    gap: 15px;
+}
+.anexos-row {
+    display: flex;
+    gap: 20px;
+}
+.anexo-card {
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.anexo-card:hover {
+    background-color: #e0e0e0;
+}
+.anexo-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.anexo-content {
+    margin-bottom: 10px;
+}
+.back-btn {
+    background-color: #d1c4e9;
+    color: #5c3d80;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.back-btn:hover {
+    background-color: #b39ddb;
+}

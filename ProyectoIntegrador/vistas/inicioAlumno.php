@@ -77,6 +77,7 @@
             </label>
             <input type="file" id="anexo1" onchange="displayFileName(this)">
             <span class="file-name" id="fileName1">Archivo no seleccionado</span>
+            <span class="delete-icon" onclick="removeFile('anexo1')">✖</span> <!-- Icono de eliminar -->
         </div>
 
         <div class="upload-field">
@@ -86,6 +87,7 @@
             </label>
             <input type="file" id="anexo2" onchange="displayFileName(this)">
             <span class="file-name" id="fileName2">Archivo no seleccionado</span>
+            <span class="delete-icon" onclick="removeFile('anexo2')">✖</span> <!-- Icono de eliminar -->
         </div>
 
         <div class="upload-field">
@@ -95,6 +97,7 @@
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
             <span class="file-name" id="fileName3">Archivo no seleccionado</span>
+            <span class="delete-icon" onclick="removeFile('anexo3')">✖</span> <!-- Icono de eliminar -->
         </div>
 
         <button class="submit-btn">Enviar Solicitud</button>
@@ -139,12 +142,10 @@
             const modalAnexos = document.getElementById("modalAnexos");
             const solicitudContainer = document.getElementById("solicitudContainer");
 
-            // Close solicitudContainer if open
             if (solicitudContainer.style.display === "block") {
                 solicitudContainer.style.display = "none";
             }
 
-            // Toggle modalAnexosbbbb
             modalAnexos.style.display = (modalAnexos.style.display === "none" || modalAnexos.style.display === "") ? "flex" : "none";
         }
 
@@ -152,23 +153,36 @@
             const solicitudContainer = document.getElementById("solicitudContainer");
             const modalAnexos = document.getElementById("modalAnexos");
 
-            // Close modalAnexos if open
             if (modalAnexos.style.display === "flex") {
                 modalAnexos.style.display = "none";
             }
 
-            // Toggle solicitudContainer
             solicitudContainer.style.display = (solicitudContainer.style.display === "none" || solicitudContainer.style.display === "") ? "block" : "none";
         }
 
         function displayFileName(input) {
             const fileNameSpan = input.nextElementSibling;
+            const deleteIcon = input.parentElement.querySelector(".delete-icon");
+
             if (input.files && input.files[0]) {
                 fileNameSpan.textContent = input.files[0].name;
+                input.parentElement.classList.add("show-delete"); // Añade la clase para mostrar el icono de eliminar
             } else {
                 fileNameSpan.textContent = "Archivo no seleccionado";
+                input.parentElement.classList.remove("show-delete"); // Oculta el icono si no hay archivo
             }
+        }
+
+        function removeFile(inputId) {
+            const input = document.getElementById(inputId);
+            input.value = ""; // Resetea el valor del input (elimina el archivo seleccionado)
+            
+            const fileNameSpan = input.nextElementSibling;
+            fileNameSpan.textContent = "Archivo no seleccionado"; // Restablece el mensaje de "Archivo no seleccionado"
+            
+            input.parentElement.classList.remove("show-delete"); // Oculta el icono de eliminar
         }
     </script>
 </body>
 </html>
+
