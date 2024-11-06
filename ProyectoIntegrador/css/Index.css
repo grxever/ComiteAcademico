@@ -107,7 +107,7 @@ input::placeholder {
 }
 
 .submit-btn {
-    width: 300px;
+    width: 100%;
     padding: 15px;
     margin: 10px;
     background-color: rgb(44, 85, 128); /* Fondo blanco */
