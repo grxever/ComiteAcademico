@@ -10,10 +10,10 @@
     <div class="top-bar-superior"></div>
     <div class="top-bar-arriba">
         <div class="buttons-left">
-            <button>
-                <img src="../img/Home.png" alt="Icono Inicio">
-                Inicio
-            </button>
+        <button onclick="location.reload()">
+            <img src="../img/Home.png" alt="Icono Inicio">
+            Inicio
+        </button>
             <button onclick="toggleButtons()">
                 <img src="../img/Agregar.png" alt="Icono Solicitud">
                 Solicitud
@@ -23,10 +23,11 @@
             <button>
                 <img src="../img/Notificaciones.png" alt="Icono Notificaciones">
             </button>
-            <button>
+            <button onclick="window.location.href='../index.php'">
                 <img src="../img/Cerrar Sesion.png" alt="Icono Cerrar Sesión">
                 Cerrar Sesión
             </button>
+
         </div>
     </div>
 
