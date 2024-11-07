@@ -113,7 +113,7 @@
         <div class="upload-field">
             <label for="anexo3">
                 <img src="../img/pdf.png" alt="Icono de archivo">
-                Subir Anexo3:
+                Reticula:
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
             <span class="file-name" id="fileName3">Archivo no seleccionado</span>
