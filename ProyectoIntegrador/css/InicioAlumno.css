@@ -169,7 +169,7 @@ body {
     color: #888;
     flex-grow: 1;
     text-align: right;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 /* Icono de eliminar */
@@ -250,3 +250,5 @@ body {
 .back-btn:hover {
     background-color: #b39ddb;
 }
+
+

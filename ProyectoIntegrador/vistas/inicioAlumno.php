@@ -40,7 +40,7 @@
     <div class="title">¡Bienvenido!</div>
 
     <div class="user-info-container">
-        <img src="../img/Usuario.png" alt="Foto del usuario">
+        <img src="../img/Usuario2.png" alt="Foto del usuario">
         <?php
             session_start();
             if (isset($_SESSION['usuario'])) {
@@ -100,6 +100,26 @@
             <span class="file-name" id="fileName3">Archivo no seleccionado</span>
             <span class="delete-icon" onclick="removeFile('anexo3')">✖</span> <!-- Icono de eliminar -->
         </div>
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="upload-field">
+            <label for="Kardex o historial academico">
+                <img src="../img/archivo-pdf.png" alt="Icono de archivo">
+                Kardex o historial academico:
+            </label>
+            <input type="file" id="anexo3" onchange="displayFileName(this)">
+            <span class="file-name" id="fileName3">Archivo no seleccionado</span>
+            <span class="delete-icon" onclick="removeFile('anexo3')">✖</span> <!-- Icono de eliminar -->
+        </div>
+        <div class="upload-field">
+            <label for="anexo3">
+                <img src="../img/word-icon.png" alt="Icono de archivo">
+                Subir Anexo3:
+            </label>
+            <input type="file" id="anexo3" onchange="displayFileName(this)">
+            <span class="file-name" id="fileName3">Archivo no seleccionado</span>
+            <span class="delete-icon" onclick="removeFile('anexo3')">✖</span> <!-- Icono de eliminar -->
+        </div>
+        
 
         <button class="submit-btn">Enviar Solicitud</button>
     </div>
