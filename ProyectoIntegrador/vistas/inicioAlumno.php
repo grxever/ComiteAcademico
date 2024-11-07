@@ -93,7 +93,7 @@
 
         <div class="upload-field">
             <label for="anexo3">
-                <img src="../img/pdf.png" alt="Icono de archivo">
+                <img src="../img/archivo-pdf.png" alt="Icono de archivo">
                 Subir Anexo3:
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
