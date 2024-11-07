@@ -73,7 +73,7 @@
 
         <div class="upload-field">
             <label for="anexo1">
-                <img src="../img/word-icon.png" alt="Icono de archivo">
+                <img src="../img/pdf.png" alt="Icono de archivo">
                 Subir Anexo1:
             </label>
             <input type="file" id="anexo1" onchange="displayFileName(this)">
@@ -103,7 +103,7 @@
         <!-- ---------------------------------------------------------------------- -->
         <div class="upload-field">
             <label for="Kardex o historial academico">
-                <img src="../img/archivo-pdf.png" alt="Icono de archivo">
+                <img src="../img/pdf.png" alt="Icono de archivo">
                 Kardex o historial academico:
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
@@ -112,7 +112,7 @@
         </div>
         <div class="upload-field">
             <label for="anexo3">
-                <img src="../img/word-icon.png" alt="Icono de archivo">
+                <img src="../img/pdf.png" alt="Icono de archivo">
                 Subir Anexo3:
             </label>
             <input type="file" id="anexo3" onchange="displayFileName(this)">
