@@ -119,6 +119,8 @@
             <span class="file-name" id="fileName3">Archivo no seleccionado</span>
             <span class="delete-icon" onclick="removeFile('anexo3')">✖</span> <!-- Icono de eliminar -->
         </div>
+
+        
         
 
         <button class="submit-btn">Enviar Solicitud</button>
