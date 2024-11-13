@@ -16,8 +16,7 @@
             </button>
         </div>
         <div class="buttons-right">
-             <!-- Botón de Notificaciones -->
-             <button onclick="toggleNotificaciones()">
+            <button onclick="toggleNotificaciones()">
                 <img src="../img/Notificaciones.png" alt="Icono Notificaciones">
             </button>
             <button onclick="window.location.href = 'cerrar_sesion.php'">
@@ -43,24 +42,214 @@
     <div class="alta-container">
         <div class="alta-title">Dar de Alta</div>
         <div class="alta-buttons">
-            <button onclick="window.location.href = 'FormAlumno.php'">
+            <button onclick="mostrarFormularioAlumno()">
                 <img src="../img/Alumno.png" alt="Icono Alumnos">
                 Alumnos
-            </button>
-            <button onclick="window.location.href = 'FormJefeDiv.php'">
+            </button>  
+            <button onclick="mostrarFormularioJefeCarrera()">
                 <img src="../img/Jefe de Carrera.png" alt="Icono Jefe de Carrera">
                 Jefe de Carrera
             </button>
-            <button onclick="window.location.href = 'FormSecretario.php'">
+            <button onclick="mostrarFormularioSecretario()">
                 <img src="../img/Secretario.png" alt="Icono Secretario de Academia">
                 Secretario de Academia
             </button>
         </div>
     </div>
 
+    <!-- Formulario modal para agregar Alumno -->
+    <div id="formularioAlumno" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarFormularioAlumno()">&times;</span>
+            <h2>Agregar Alumno</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido_paterno">Apellido Paterno:</label>
+                    <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido_materno">Apellido Materno:</label>
+                    <input type="text" id="apellido_materno" name="apellido_materno" required>
+                </div>
 
-    <?php
-    // Código PHP adicional
-    ?>
+                <div class="form-group">
+                    <label for="carrera">Carrera:</label>
+                    <select id="carrera" name="carrera" required>
+                        <option value="">Seleccione una carrera</option>
+                        <option value="Ingeniería Civil">Ingeniería Civil</option>
+                        <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                        <option value="Ingeniería en Industrias Alimentarias">Ingeniería en Industrias Alimentarias</option>
+                        <option value="Ingeniería en Electromecánica">Ingeniería en Electromecánica</option>
+                        <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+                        <option value="Ingeniería en Gestión Empresarial">Ingeniería en Gestión Empresarial</option>
+                        <option value="Arquitectura">Arquitectura</option>
+                        <option value="Ingeniería en Tecnologías de la Información y Comunicaciones">Ingeniería en Tecnologías de la Información y Comunicaciones</option>
+                        <option value="Ingeniería en Logística">Ingeniería en Logística</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="grado">Grado:</label>
+                    <select id="grado" name="grado" required>
+                        <option value="">Seleccione un grado</option>
+                        <!-- Opciones de 1 a 13 -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="grupo">Grupo:</label>
+                    <select id="grupo" name="grupo" required>
+                        <option value="">Seleccione un grupo</option>
+                        <!-- Opciones de A a F -->
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                </div>
+
+                <button type="submit" class="agregar-btn">Agregar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulario modal para agregar Jefe de Carrera -->
+    <div id="formularioJefeCarrera" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarFormularioJefeCarrera()">&times;</span>
+            <h2>Agregar Jefe de Carrera</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre_jefe">Nombre:</label>
+                    <input type="text" id="nombre_jefe" name="nombre_jefe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido_paterno_jefe">Apellido Paterno:</label>
+                    <input type="text" id="apellido_paterno_jefe" name="apellido_paterno_jefe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido_materno_jefe">Apellido Materno:</label>
+                    <input type="text" id="apellido_materno_jefe" name="apellido_materno_jefe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carrera_jefe">Carrera:</label>
+                    <select id="carrera_jefe" name="carrera_jefe" required>
+                        <option value="">Seleccione una carrera</option>
+                        <option value="Ingeniería Civil">Ingeniería Civil</option>
+                        <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                        <option value="Ingeniería en Industrias Alimentarias">Ingeniería en Industrias Alimentarias</option>
+                        <option value="Ingeniería en Electromecánica">Ingeniería en Electromecánica</option>
+                        <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+                        <option value="Ingeniería en Gestión Empresarial">Ingeniería en Gestión Empresarial</option>
+                        <option value="Arquitectura">Arquitectura</option>
+                        <option value="Ingeniería en Tecnologías de la Información y Comunicaciones">Ingeniería en Tecnologías de la Información y Comunicaciones</option>
+                        <option value="Ingeniería en Logística">Ingeniería en Logística</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="agregar-btn">Agregar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="formularioSecretario" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarFormularioSecretario()">&times;</span>
+            <h2>Agregar Secretario</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre_jefe">Nombre:</label>
+                    <input type="text" id="nombre_jefe" name="nombre_jefe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido_paterno_jefe">Apellido Paterno:</label>
+                    <input type="text" id="apellido_paterno_jefe" name="apellido_paterno_jefe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido_materno_jefe">Apellido Materno:</label>
+                    <input type="text" id="apellido_materno_jefe" name="apellido_materno_jefe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carrera_jefe">Carrera:</label>
+                    <select id="carrera_jefe" name="carrera_jefe" required>
+                        <option value="">Seleccione una carrera</option>
+                        <option value="Ingeniería Civil">Ingeniería Civil</option>
+                        <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                        <option value="Ingeniería en Industrias Alimentarias">Ingeniería en Industrias Alimentarias</option>
+                        <option value="Ingeniería en Electromecánica">Ingeniería en Electromecánica</option>
+                        <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+                        <option value="Ingeniería en Gestión Empresarial">Ingeniería en Gestión Empresarial</option>
+                        <option value="Arquitectura">Arquitectura</option>
+                        <option value="Ingeniería en Tecnologías de la Información y Comunicaciones">Ingeniería en Tecnologías de la Información y Comunicaciones</option>
+                        <option value="Ingeniería en Logística">Ingeniería en Logística</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="agregar-btn">Agregar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Funciones para mostrar y cerrar el formulario de Alumno
+        function mostrarFormularioAlumno() {
+            document.getElementById("formularioAlumno").style.display = "flex";
+        }
+
+        function cerrarFormularioAlumno() {
+            document.getElementById("formularioAlumno").style.display = "none";
+        }
+
+        // Funciones para mostrar y cerrar el formulario de Jefe de Carrera
+        function mostrarFormularioJefeCarrera() {
+            document.getElementById("formularioJefeCarrera").style.display = "flex";
+        }
+
+        function cerrarFormularioJefeCarrera() {
+            document.getElementById("formularioJefeCarrera").style.display = "none";
+        }
+
+         // Funciones para mostrar y cerrar el formulario de secretario
+         function mostrarFormularioSecretario() {
+            document.getElementById("formularioSecretario").style.display = "flex";
+        }
+
+        function cerrarFormularioSecretario() {
+            document.getElementById("formularioSecretario").style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
